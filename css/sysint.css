@@ -111,7 +111,7 @@ section h4 {
 }
 
 section p {
-    text-align: justify;
+    text-align: inherit;
 }
 
 section a.button {
@@ -440,6 +440,7 @@ section .timeline {
     margin: 0;
     list-style: none;
 }
+
 section .timeline .timeline-heading h4 {
     /* line-height: 1.3rem; */
     font-size: calc(18px + 6 * ((100vw - 320px) / 680));
@@ -449,6 +450,13 @@ section .timeline .timeline-heading h4 {
 section .timeline .subheading {
     margin: 0;
     padding: 0;
+}
+
+.visual-block-5 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fc8e40;
+    margin: auto;
 }
 
 section .timeline>li {
@@ -468,7 +476,7 @@ section .timeline>li:after {
 
 section .timeline>li .timeline-panel {
     position: relative;
-    float: left;
+    /* float: left; */
     padding: 0 1rem 1rem 5rem;
     text-align: left;
 }
@@ -488,6 +496,7 @@ section .timeline>li .timeline-panel:after {
 }
 
 section .timeline>li .timeline-image {
+    display: flex;
     position: absolute;
     z-index: 100;
     left: 0.5rem;
@@ -498,7 +507,7 @@ section .timeline>li .timeline-image {
     color: #fff;
     border: 5px solid #4f4f51;
     border-radius: 100%;
-    background-color: #fc8e40
+    background-color: white;    
 }
 
 section .timeline:before {
@@ -512,7 +521,7 @@ section .timeline:before {
 }
 
 section .timeline>li.timeline-inverted>.timeline-panel {
-    float: left;
+    /* float: left; */
     padding: 0 1rem 0rem 5rem;
     text-align: left
 }
@@ -583,6 +592,26 @@ section .timeline .text-muted {
         padding: 0 1rem 1rem 3rem;
     }
 
+    /* section .timeline>li .timeline-panel {
+        /* float: left; 
+        width: 40%;
+        /* text-align: right; */
+        /* padding: 0 1rem 1rem 3rem; 
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        /* justify-content: center; */
+        /* justify-items: center; */
+        /* align-content: center; */
+        /* align-self: center; 
+        flex-flow: column;
+        margin: auto 0;
+    } */
+
     section .timeline>li .timeline-image {
         left: 50%;
         width: 100px;
@@ -599,6 +628,10 @@ section .timeline .text-muted {
     section .timeline>li.timeline-inverted>.timeline-panel {
         float: right;
         text-align: left;
+    }
+
+    .visual-block-5 {
+        font-size: 4rem;
     }
 }
 
@@ -639,11 +672,11 @@ section .timeline .text-muted {
     section .timeline:before {
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: -20px;
         width: 10px;
         margin-left: 0;
         content: '';
-        background-color: #e9ecef
+        background-image: linear-gradient(#e9ecef, white) 
     }
 
     section .timeline>li {
@@ -651,7 +684,7 @@ section .timeline .text-muted {
     }
 
     section .timeline>li .timeline-panel {
-        padding: 0 1rem 1rem 1rem
+        /* padding: 0 1rem 1rem 1rem */
     }
 
     section .timeline>li .timeline-image {
@@ -703,8 +736,7 @@ section #tabs .heading a {
 
 section #contacts .col-sm {
     display: inline-block;
-    flex:none;
-    min-width: 40%;
+    flex: none;
     text-align: center;
 }
 
@@ -791,9 +823,7 @@ section #contacts .col-sm img {
         margin:0.4em auto;
         width:80%;
     }
-    section .mobile-hidden {
-        display: none;
-    }
+
     section .heading h1 {
         font-size: 2em;
         font-weight: 700;
@@ -912,6 +942,10 @@ section div.container {
     display: block;
 }
 
+section .margin-auto {
+    margin: auto;
+}
+
 section div.relative-image {
     display: block;
     position: relative;
@@ -984,16 +1018,29 @@ section .container-wrapper {
     display: flex;
 }
 
+.w-100 {
+    min-width: 100%;
+    width: 100%;
+}
+
+.w-90 {
+    min-width: 90%;
+    width: 90%;
+}
+
 .w-80 {
     min-width: 80%;
+    width: 80%;
 }
 
 .w-70 {
     min-width: 70%;
+    width: 70%;
 }
 
 .w-60 {
     min-width: 60%;
+    width: 60%;
 }
 
 .w-50 {
@@ -1003,14 +1050,17 @@ section .container-wrapper {
 
 .w-40 {
     min-width: 40%;
+    width: 40%;
 }
 
 .w-30 {
     min-width: 30%;
+    width: 30%;
 }
 
 .w-20 {
     min-width: 20%;
+    width: 20%;
 }
 
 @media screen and (max-width: 1200px) { 
@@ -1018,11 +1068,27 @@ section .container-wrapper {
     section .container-wrapper {display:block;}
 }
 
-.text-muted {
-    text-align: center !important;
+section .text-muted {
+    text-align: center;
     font-style: italic;
-    background: #d2d2d8;
+    background: #eee;
 }
+
+section blockquote {
+    font-style: italic;
+    quotes: "“" "”" "‘" "’"
+}
+
+section .quote {
+    margin: 0;
+    background: #eee;
+    padding: 1em;
+    border-radius: 1em;
+  }
+  section .quote figcaption,
+  section .quote blockquote {
+    margin: 1em;
+  }
 
 .visual-block-3 {
     float: left;
@@ -1043,6 +1109,8 @@ section .container-wrapper {
     height: 44px;
 }
 
+
+
 .slick-slide img {
     display: block;
     max-width: 100%;
@@ -1056,7 +1124,7 @@ section .container-wrapper {
 }
 
 section .col-sm p {
-    text-align: inherit;
+    text-align: justify;
     position: relative;
     padding: inherit;
     margin: auto 0;
@@ -1064,9 +1132,23 @@ section .col-sm p {
     align-items: center;
 }
 
-section .text-left {text-align: left;}
-section .text-justify {text-align: justify;}
-section .text-center {text-align: center;}
+section .text-left {text-align: left !important;}
+section .text-right {text-align: right !important;}
+section .text-justify {text-align: justify !important;}
+section .text-center {text-align: center !important;}
+
+section .bold {
+    font-weight: bold;
+}
+
+section .italic {
+    font-style: italic;
+}
+
+section .flex-center {
+    align-items: center;
+    justify-content: center;
+}
 
 @media screen and (max-width: 500px) { 
     section p {font-size: 1rem;}
@@ -1097,14 +1179,20 @@ section .top-text {
     margin-top: 34px;
 }
 
-section .bold {
-    font-weight: bold;
-    text-align: left !important;
-}
 
 section .flex-hack {
     /* display: block; */
     flex: 1 1 100% !important;
+    flex-direction: row;
+}
+
+section .flex-wrap {
+    flex-wrap: wrap;
+    align-items: center;
+}
+section .flex-heading {
+    order: -1;
+    flex: 1 0 100%;    
 }
 
 .visual-block-4 {
@@ -1282,7 +1370,6 @@ section details[open] summary ~ * {
     100%  {opacity: 1; margin-left: 0px}
   }
 
-
 section details summary:after {
     content: '▼' !important;
     display: flex !important;
@@ -1330,6 +1417,7 @@ section summary {
     display: flex;
     margin-block-end: 1rem;
 }
+
 
 
 @media (min-width: 801px) and (max-width: 1337px) {
@@ -1561,3 +1649,16 @@ section .row a {
     color: inherit;
     text-decoration: none;
 }
+
+@media screen and (max-width:1201px) {
+    section .mobile-hidden {
+        display: none !important;
+    }
+}
+@media screen and (min-width:1200px) {
+    section .desktop-hidden {
+        display: none !important;
+    }
+}
+
+

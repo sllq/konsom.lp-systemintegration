@@ -119,8 +119,6 @@ section .heading h1,h2 {
     color: #fc8e40 !important;
 }
 
-@media screen and (min-width:899px) {.desktop-hidden {display: none;}}
-
 section .btn {
     color: #fff;
     cursor: pointer;
