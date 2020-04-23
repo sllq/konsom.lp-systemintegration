@@ -11,9 +11,8 @@
     <!-- Scripts -->
     <!-- DEV CDN min scripts -->
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/sysint.js"></script>
     <link rel="stylesheet" href="js/slick-1.8.1/slick/slick.css" type="text/css" media="screen">
     <link rel="stylesheet" href="js/slick-1.8.1/slick/slick-theme.css" type="text/css" media="screen">
 
@@ -21,8 +20,9 @@
     <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
 </head>
+<button id="dev1" onclick="if (document.getElementById('wrap').style.width == '100%') {this.innerHTML='Растянуть по ширине'; document.getElementById('wrap').style.width = '1337px';} else {this.innerHTML='Задать ширину темплейта 1337px';document.getElementById('wrap').style.width = '100%'};" class="dev-button">Задать ширину темплейта 1337px</button>
 <section>
-    <div class="wrap">
+    <div id='wrap' class="wrap">
         <div class="heading">
             <h1>ПРОМЫШЛЕННАЯ СИСТЕМНАЯ ИНТЕГРАЦИЯ</h1>
             <div class="row">
@@ -37,10 +37,10 @@
 
         <div class="container-wrapper mobile-hidden">
             <div class="row text-center">
-                <div class="container w-100" style="margin-left: -45%">
+                <div class="container w-100" style="margin-left: -55%">
                     <h3><span class="visual-block-4">1995</span> - год основания КОНСОМ ГРУПП </h3>
                 </div>
-                <div class="container w-100" style="margin-left: -10%">
+                <div class="container w-100" style="margin-left: -15%">
                     <h3>По состоянию на 2020 год - это <span class="visual-block-4">3</span> профильных предприятия
                     </h3>
                 </div>
@@ -526,7 +526,7 @@
             </div>
         </div>
         <div class="container-wrapper flex-center" id="contacts">
-            <div class="container w-60">
+            <div class="container w-80">
                 <h2>Свяжитесь с нами</h2>
                 <div class="row flex-center">
                     <div class="col-sm transparent black no-border no-margin">
