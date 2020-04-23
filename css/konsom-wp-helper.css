@@ -143,3 +143,17 @@ body > div.content-wrapper > div.content.content-wide ul:not(.menus) li:before,
   font-weight: bold;
   color: #fc8e40;
 }
+
+.dev-button {
+	position: sticky;
+	top: 0;
+	background-color: #f44336;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	z-index: 1000;
+  }
